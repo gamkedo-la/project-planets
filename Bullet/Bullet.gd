@@ -14,11 +14,10 @@ func _physics_process(delta):
 func _on_Bullet_area_entered(area):
 	if area.get_parent().is_in_group("planet"):
 		speed = 0
-		area.get_parent().spawn_reward($ImpactFX.global_transform)
+		Events.emit_signal("planet_hit",global_transform)
 		$AnimationPlayer.play("hit_fx")
 
 	elif area.get_parent().is_in_group("shield"):
-		# $AnimationPlayer.play("hit_fx")
 		pass
 
 func destroy_self():

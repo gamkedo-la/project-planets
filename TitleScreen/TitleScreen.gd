@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready():
-	print(Global.get_children())
+	print(Global.name)
 	
 func _process(delta):
 	if Input.is_action_pressed("ui_down"):
