@@ -1,0 +1,282 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ShieldRing/ShieldRing.png" type="Texture" id=1]
+[ext_resource path="res://ShieldOrb/ShieldOrb.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ShieldRing/ShieldRing.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "EasySpin"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "HardSpin"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Medium:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 47.0, 227.0, 407.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Hard:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 23.0, 203.0, 383.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "ImpossibleSpin"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Medium:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 47.0, 227.0, 407.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Hard:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 23.0, 203.0, 383.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Impossible:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 68.0, 248.0, 428.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "MediumSpin"
+length = 20.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Medium:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 10, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 47.0, 227.0, 407.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Medium:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 47.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Hard:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 23.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Impossible:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 68.0 ]
+}
+
+[node name="ShieldRing" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Easy/Sprite")
+anims/EasySpin = SubResource( 1 )
+anims/HardSpin = SubResource( 3 )
+anims/ImpossibleSpin = SubResource( 4 )
+anims/MediumSpin = SubResource( 5 )
+anims/RESET = SubResource( 2 )
+
+[node name="Easy" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Easy"]
+visible = false
+texture = ExtResource( 1 )
+
+[node name="ShieldOrb" parent="Easy" instance=ExtResource( 2 )]
+position = Vector2( -225, 3 )
+
+[node name="ShieldOrb2" parent="Easy" instance=ExtResource( 2 )]
+position = Vector2( 225, 3 )
+rotation = 3.14159
+
+[node name="ShieldOrb3" parent="Easy" instance=ExtResource( 2 )]
+position = Vector2( 0, 225 )
+rotation = -1.5708
+
+[node name="ShieldOrb4" parent="Easy" instance=ExtResource( 2 )]
+position = Vector2( 0, -225 )
+rotation = 1.5708
+
+[node name="Medium" type="Node2D" parent="."]
+rotation = 0.820305
+
+[node name="ShieldOrb" parent="Medium" instance=ExtResource( 2 )]
+position = Vector2( -225, 3 )
+
+[node name="ShieldOrb2" parent="Medium" instance=ExtResource( 2 )]
+position = Vector2( 225, 3 )
+rotation = 3.14159
+
+[node name="ShieldOrb3" parent="Medium" instance=ExtResource( 2 )]
+position = Vector2( 0, 225 )
+rotation = -1.5708
+
+[node name="ShieldOrb4" parent="Medium" instance=ExtResource( 2 )]
+position = Vector2( 0, -225 )
+rotation = 1.5708
+
+[node name="Hard" type="Node2D" parent="."]
+rotation = 0.401426
+
+[node name="ShieldOrb" parent="Hard" instance=ExtResource( 2 )]
+position = Vector2( -225, 3 )
+
+[node name="ShieldOrb2" parent="Hard" instance=ExtResource( 2 )]
+position = Vector2( 225, 3 )
+rotation = 3.14159
+
+[node name="ShieldOrb3" parent="Hard" instance=ExtResource( 2 )]
+position = Vector2( 0, 225 )
+rotation = -1.5708
+
+[node name="ShieldOrb4" parent="Hard" instance=ExtResource( 2 )]
+position = Vector2( 0, -225 )
+rotation = 1.5708
+
+[node name="Impossible" type="Node2D" parent="."]
+rotation = 1.18682
+
+[node name="ShieldOrb" parent="Impossible" instance=ExtResource( 2 )]
+position = Vector2( -225, 3 )
+
+[node name="ShieldOrb2" parent="Impossible" instance=ExtResource( 2 )]
+position = Vector2( 225, 3 )
+rotation = 3.14159
+
+[node name="ShieldOrb3" parent="Impossible" instance=ExtResource( 2 )]
+position = Vector2( 0, 225 )
+rotation = -1.5708
+
+[node name="ShieldOrb4" parent="Impossible" instance=ExtResource( 2 )]
+position = Vector2( 0, -225 )
+rotation = 1.5708
