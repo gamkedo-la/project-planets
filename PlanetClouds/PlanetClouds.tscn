@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PlanetClouds/dynamic_planet_clouds_2d.tres" type="Material" id=1]
+[ext_resource path="res://PlanetClouds/white300.png" type="Texture" id=2]
+
+[node name="PlanetClouds" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = ExtResource( 1 )
+position = Vector2( 9.09495e-13, -1 )
+rotation = 0.00178446
+texture = ExtResource( 2 )
