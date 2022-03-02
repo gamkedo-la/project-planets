@@ -17,4 +17,4 @@ func spawn_reward(pos):
 	
 func shake_planet():
 	$Shaker.start()
-	#$AnimationPlayer.play("shake")
+
