@@ -1,14 +1,36 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Planet/Planet.png" type="Texture" id=1]
 [ext_resource path="res://Planet/Planet.gd" type="Script" id=2]
 [ext_resource path="res://Ore/Ore.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PlanetClouds/PlanetClouds.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Shaker/Shaker.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 151.013
 
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "shake"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, 384 ), Vector2( 487, 384 ), Vector2( 537, 384 ), Vector2( 512, 384 ) ]
+}
+
 [node name="Planet" type="Node2D" groups=["planet"]]
+position = Vector2( 537, 248 )
 script = ExtResource( 2 )
 ore = ExtResource( 3 )
 
@@ -21,3 +43,9 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="PlanetClouds" parent="." instance=ExtResource( 4 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/shake = SubResource( 3 )
+
+[node name="Shaker" parent="." instance=ExtResource( 5 )]

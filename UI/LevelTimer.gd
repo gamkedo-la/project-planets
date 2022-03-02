@@ -14,7 +14,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	print($Timer.is_stopped())
 	$TimerLabel.text = str(int($Timer.time_left))
 #	pass
