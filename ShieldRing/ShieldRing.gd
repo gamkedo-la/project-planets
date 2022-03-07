@@ -1,6 +1,7 @@
 extends Node2D
 
 export var difficulty = "easy"
+export var difficulty_speed = 1.5
 
 func _ready():
 	if difficulty == "none":
@@ -20,3 +21,5 @@ func _ready():
 	elif difficulty == "hard":
 		$Impossible.queue_free()
 		$AnimationPlayer.play("HardSpin")
+		
+	$AnimationPlayer.playback_speed = difficulty_speed
