@@ -17,6 +17,9 @@ func _physics_process(delta: float) -> void:
 	$CollidingParticles2D.emitting = is_colliding()
 	
 	if is_colliding():
+		if get_collider().is_in_group("player"):
+			Events.emit_signal("player_hit")
+		
 		cast_point = to_local(get_collision_point())
 		$CollidingParticles2D.global_rotation = get_collision_normal().angle()
 		$CollidingParticles2D.position = cast_point
