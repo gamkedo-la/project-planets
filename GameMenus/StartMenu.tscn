@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=3]
+[ext_resource path="res://GameMenus/StartMenu.gd" type="Script" id=4]
+[ext_resource path="res://GameMenus/MenuBtn.tscn" type="PackedScene" id=5]
+
+[node name="StartMenu" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+
+[node name="Title" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopHalf" type="CenterContainer" parent="Title"]
+margin_right = 1024.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 0, 384 )
+
+[node name="Title" type="Label" parent="Title/TopHalf"]
+margin_left = 67.0
+margin_top = 155.0
+margin_right = 957.0
+margin_bottom = 228.0
+custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.639216, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Project Planets"
+align = 1
+valign = 1
+
+[node name="BottomHalf_MainMenu" type="VBoxContainer" parent="Title"]
+margin_top = 388.0
+margin_right = 1024.0
+margin_bottom = 772.0
+rect_min_size = Vector2( 0, 384 )
+custom_constants/separation = 25
+
+[node name="StartBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1024.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_top = NodePath("../ExitBtn")
+focus_neighbour_bottom = NodePath("../OptionsBtn")
+focus_mode = 1
+text = "Start Game"
+arrow_margin_from_center = 154
+
+[node name="OptionsBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 65.0
+margin_right = 1024.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_top = NodePath("../StartBtn")
+focus_neighbour_bottom = NodePath("../ExitBtn")
+focus_mode = 1
+text = "Options"
+arrow_margin_from_center = 154
+
+[node name="ExitBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 130.0
+margin_right = 1024.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_top = NodePath("../OptionsBtn")
+focus_neighbour_bottom = NodePath("../StartBtn")
+focus_mode = 1
+text = "Exit Game"
+arrow_margin_from_center = 154
+
+[connection signal="pressed" from="Title/BottomHalf_MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
+[connection signal="pressed" from="Title/BottomHalf_MainMenu/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
+[connection signal="pressed" from="Title/BottomHalf_MainMenu/ExitBtn" to="." method="_on_ExitBtn_pressed"]
