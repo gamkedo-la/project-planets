@@ -23,5 +23,6 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="PlanetClouds" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="Shaker" parent="." instance=ExtResource( 5 )]
