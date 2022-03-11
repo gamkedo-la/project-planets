@@ -7,7 +7,7 @@
 [ext_resource path="res://UI/LevelTimer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=6]
 [ext_resource path="res://HealthBar/HealthBar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://UI/Controls/PauseGame.gd" type="Script" id=8]
+[ext_resource path="res://GameMenus/PauseMenu.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 521, 32 )
@@ -16,6 +16,11 @@ extents = Vector2( 521, 32 )
 extents = Vector2( 30, 389 )
 
 [node name="Main" type="Node2D"]
+
+[node name="PauseMenuLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseMenuLayer" instance=ExtResource( 8 )]
+visible = false
 
 [node name="Sprite" type="Sprite" parent="."]
 z_index = -10
@@ -64,18 +69,3 @@ shape = SubResource( 2 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 7 )]
 position = Vector2( 808, 712 )
-
-[node name="PauseScreenLayer" type="CanvasLayer" parent="."]
-layer = 100
-
-[node name="PauseGame" type="Control" parent="PauseScreenLayer"]
-pause_mode = 2
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 8 )
-
-[node name="PauseScreen" type="ColorRect" parent="PauseScreenLayer/PauseGame"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.431373 )

@@ -57,7 +57,7 @@ focus_neighbour_top = NodePath("../ExitBtn")
 focus_neighbour_bottom = NodePath("../OptionsBtn")
 focus_mode = 1
 text = "Start Game"
-arrow_margin_from_center = 154
+arrow_margin_from_center = 148
 
 [node name="OptionsBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 5 )]
 anchor_left = 0.0
@@ -73,7 +73,7 @@ focus_neighbour_top = NodePath("../StartBtn")
 focus_neighbour_bottom = NodePath("../ExitBtn")
 focus_mode = 1
 text = "Options"
-arrow_margin_from_center = 154
+arrow_margin_from_center = 111
 
 [node name="ExitBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 5 )]
 anchor_left = 0.0
@@ -89,7 +89,7 @@ focus_neighbour_top = NodePath("../OptionsBtn")
 focus_neighbour_bottom = NodePath("../StartBtn")
 focus_mode = 1
 text = "Exit Game"
-arrow_margin_from_center = 154
+arrow_margin_from_center = 129
 
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
