@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Audio/Music/Music_Main_Menu.wav" type="AudioStream" id=2]
 [ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=3]
 [ext_resource path="res://GameMenus/StartMenu.gd" type="Script" id=4]
 [ext_resource path="res://GameMenus/MenuBtn.tscn" type="PackedScene" id=5]
@@ -90,6 +91,10 @@ focus_neighbour_bottom = NodePath("../StartBtn")
 focus_mode = 1
 text = "Exit Game"
 arrow_margin_from_center = 129
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
 
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
