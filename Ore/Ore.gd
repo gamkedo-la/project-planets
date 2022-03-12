@@ -21,7 +21,7 @@ func _process(delta):
 		var collision = get_slide_collision(i)
 		
 		if collision.collider.name == "Player":
-			Global.orbs_collected += 1
+			Events.emit_signal("orb_collected")
 			queue_free()
 	
 

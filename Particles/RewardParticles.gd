@@ -1,12 +1,13 @@
 extends Node2D
 
 
-var health_particles = load("res://Particles/HealthParticles.tscn")
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Events.connect("player_hit", self, "reduce_health")
 	pass # Replace with function body.
 
 
@@ -14,5 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func reduce_health():
-	$TextureProgress.value -= 1
+
+func _on_Timer_timeout():
+	queue_free()
