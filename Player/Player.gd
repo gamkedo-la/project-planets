@@ -30,8 +30,10 @@ func shoot():
 	var b = bullet.instance()
 	owner.add_child(b)
 	b.transform = $BulletSpawnPosition.global_transform
+	$Shoot_SFX.play()
 	
 func spawn_reward_particle():
 	var p = reward_particle.instance()
 	$PlayerSprite.add_child(p)
+	$Reward_SFX.play()
 	# p.transform = $PlayerSprite.global_transform

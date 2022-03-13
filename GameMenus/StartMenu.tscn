@@ -56,7 +56,6 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 focus_neighbour_top = NodePath("../ExitBtn")
 focus_neighbour_bottom = NodePath("../OptionsBtn")
-focus_mode = 1
 text = "Start Game"
 arrow_margin_from_center = 148
 
@@ -72,7 +71,6 @@ margin_bottom = 105.0
 rect_min_size = Vector2( 0, 40 )
 focus_neighbour_top = NodePath("../StartBtn")
 focus_neighbour_bottom = NodePath("../ExitBtn")
-focus_mode = 1
 text = "Options"
 arrow_margin_from_center = 111
 
@@ -88,7 +86,6 @@ margin_bottom = 170.0
 rect_min_size = Vector2( 0, 40 )
 focus_neighbour_top = NodePath("../OptionsBtn")
 focus_neighbour_bottom = NodePath("../StartBtn")
-focus_mode = 1
 text = "Exit Game"
 arrow_margin_from_center = 129
 
