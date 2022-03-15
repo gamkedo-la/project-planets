@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export (PackedScene) var bullet
 var reward_particle = load("res://Particles/RewardParticles.tscn")
+var damage_particle = load("res://Particles/PlayerDamageParticles.tscn")
 
 var move_speed = 100 # pixels/sec
 var fire_rate = 10
@@ -10,6 +11,7 @@ var current_time = 0
 
 func _ready():
 	Events.connect("orb_collected", self, "spawn_reward_particle")
+	Events.connect("player_hit", self, "spawn_damage_particle")
 
 
 func _physics_process(delta):
@@ -37,3 +39,8 @@ func spawn_reward_particle():
 	$PlayerSprite.add_child(p)
 	$Reward_SFX.play()
 	# p.transform = $PlayerSprite.global_transform
+
+func spawn_damage_particle():
+	var p = damage_particle.instance()
+	$PlayerSprite.add_child(p)
+	$Damage_SFX.play()
