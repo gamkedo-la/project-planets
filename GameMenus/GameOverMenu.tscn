@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=2]
+[ext_resource path="res://GameMenus/MenuBtn.tscn" type="PackedScene" id=3]
+
+[node name="GameOverScreen" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Title" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 384.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopHalf" type="CenterContainer" parent="Title"]
+margin_right = 1024.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 0, 384 )
+
+[node name="Title" type="Label" parent="Title/TopHalf"]
+margin_left = 243.0
+margin_top = 155.0
+margin_right = 780.0
+margin_bottom = 228.0
+custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.639216, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Game Over!"
+align = 1
+valign = 1
+
+[node name="BottomHalf_MainMenu" type="VBoxContainer" parent="Title"]
+margin_top = 388.0
+margin_right = 1024.0
+margin_bottom = 772.0
+rect_min_size = Vector2( 0, 384 )
+custom_constants/separation = 25
+
+[node name="StartBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 3 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1024.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_top = NodePath("../ExitBtn")
+text = "Restart"
+arrow_margin_from_center = 148
+
+[node name="ExitBtn" parent="Title/BottomHalf_MainMenu" instance=ExtResource( 3 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 65.0
+margin_right = 1024.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_bottom = NodePath("../StartBtn")
+text = "Exit Game"
+arrow_margin_from_center = 129
