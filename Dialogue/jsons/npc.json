@@ -1,0 +1,6 @@
+[
+  {"name": "Player", "text": "Hello, is anybody there?"},
+  {"name": "NPC", "text": "No. Now go away."},
+  {"name": "Player", "text": "I can hear you."},
+  {"name": "NPC", "text": "Then why are you still here?"}
+]
