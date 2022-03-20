@@ -15,4 +15,7 @@ func _ready():
 #	pass
 
 func reduce_health():
-	$TextureProgress.value -= 1
+	$TextureProgress.value -= 3
+	
+	if $TextureProgress.value <= 0:
+		Events.emit_signal("game_over_triggered")

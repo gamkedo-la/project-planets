@@ -12,6 +12,8 @@ var current_time = 0
 func _ready():
 	Events.connect("orb_collected", self, "spawn_reward_particle")
 	Events.connect("player_hit", self, "spawn_damage_particle")
+	Events.connect("game_over_triggered", self, "game_over_triggered")
+	Events.connect("player_exploded", self, "player_exploded")
 
 
 func _physics_process(delta):
@@ -44,3 +46,10 @@ func spawn_damage_particle():
 	var p = damage_particle.instance()
 	$PlayerSprite.add_child(p)
 	$Damage_SFX.play()
+
+func game_over_triggered():
+	$PlayerSprite.visible = false
+	
+func player_exploded():
+	queue_free()
+	get_tree().change_scene("res://GameMenus/GameOverMenu.tscn")
