@@ -5,7 +5,7 @@ func _ready():
 
 func _on_StartBtn_pressed():
 	print("Start Button pressed")
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene("res://Levels/Level_1.tscn")
 
 
 func _on_OptionsBtn_pressed():
