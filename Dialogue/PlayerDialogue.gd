@@ -25,12 +25,20 @@ func next_line():
 	if current_dialogue_id >= len(dialogues):
 		print("End of dialogue")
 		return
+		
+	var file = File.new()
+	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["name"] + ".png"
 	
-	$NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]	
-	$NinePatchRect/Dialogue.text = dialogues[current_dialogue_id]["text"]
+	if file.file_exists(img):
+		$DialogUI/TextureRect.texture = load(img)
+	else: $DialogUI/TextureRect.texture = null
+	
+	$DialogUI/NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]	
+	$DialogUI/NinePatchRect/Dialogue.text = dialogues[current_dialogue_id]["text"]
 	
 func load_dialogue():
 	var file = File.new()
+	
 	if file.file_exists(dialogue_file):
 		file.open(dialogue_file, file.READ)
 		return parse_json(file.get_as_text())
