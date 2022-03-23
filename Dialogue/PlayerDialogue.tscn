@@ -12,13 +12,13 @@ dialogue_file = "res://Dialogue/jsons/npc.json"
 anchor_top = 1.0
 anchor_bottom = 1.0
 
-[node name="TextureRect" type="TextureRect" parent="DialogUI"]
+[node name="Avatar" type="TextureRect" parent="DialogUI"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = -75.0
-margin_right = 75.0
-margin_bottom = -5.0
+margin_left = 7.0
+margin_top = -97.0
+margin_right = 77.0
+margin_bottom = -27.0
 texture = ExtResource( 3 )
 expand = true
 
@@ -28,7 +28,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = 85.0
-margin_top = -69.0
+margin_top = -115.0
 margin_right = 944.0
 margin_bottom = -5.0
 texture = ExtResource( 1 )
@@ -39,9 +39,9 @@ patch_margin_bottom = 11
 
 [node name="Name" type="RichTextLabel" parent="DialogUI/NinePatchRect"]
 margin_left = 9.0
-margin_top = 3.0
-margin_right = 137.0
-margin_bottom = 20.0
+margin_top = 9.0
+margin_right = 203.0
+margin_bottom = 35.0
 text = "Name"
 
 [node name="Dialogue" type="RichTextLabel" parent="DialogUI/NinePatchRect"]
@@ -49,8 +49,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 9.0
-margin_top = -42.0
+margin_top = -69.0
 margin_right = -9.0
-margin_bottom = -3.0
+margin_bottom = -9.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Dialogue"
