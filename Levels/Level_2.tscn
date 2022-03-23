@@ -10,4 +10,8 @@ difficulty = "easy"
 [node name="ShieldOrb2" parent="ShieldRing/Easy" index="2"]
 cast = true
 
+[node name="Objective" parent="." index="5"]
+score_objective = 100
+next_level = "res://Levels/Level_3.tscn"
+
 [editable path="ShieldRing"]

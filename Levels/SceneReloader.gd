@@ -1,7 +1,8 @@
 extends Control
 
 func _ready():
-	Global.current_scene = get_tree().current_scene.filename
+#	Global.current_scene = get_tree().current_scene.filename
+	pass
 
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):

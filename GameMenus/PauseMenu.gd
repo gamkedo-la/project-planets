@@ -18,12 +18,12 @@ func _on_ResumeBtn_pressed():
 	
 func _on_RestartBtn_pressed():
 	print("Restart Button pressed")
-	get_tree().change_scene("res://Main.tscn")
+	Global.goto_scene("res://Levels/Level_1.tscn")
 	self.is_paused = false
 
 func _on_QuitBtn_pressed():
 	print("Quit Button pressed")
-	get_tree().change_scene("res://GameMenus/StartMenu.tscn")
+	Global.goto_scene("res://GameMenus/StartMenu.tscn")
 	self.is_paused = false
 
 func _on_ExitBtn_pressed():

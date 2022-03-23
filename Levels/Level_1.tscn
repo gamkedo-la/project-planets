@@ -6,3 +6,7 @@
 
 [node name="ShieldRing" parent="." index="2"]
 difficulty = "none"
+
+[node name="Objective" parent="." index="5"]
+score_objective = 50
+next_level = "res://Levels/Level_2.tscn"

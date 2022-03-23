@@ -17,4 +17,7 @@ cast = true
 [node name="ShieldOrb3" parent="ShieldRing/Easy" index="3"]
 cast = true
 
+[node name="Objective" parent="." index="5"]
+score_objective = 200
+
 [editable path="ShieldRing"]
