@@ -30,11 +30,11 @@ func next_line():
 	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["name"] + ".png"
 	
 	if file.file_exists(img):
-		$DialogUI/TextureRect.texture = load(img)
-	else: $DialogUI/TextureRect.texture = null
+		$DialogUI/Avatar.texture = load(img)
+	else: $DialogUI/Avatar.texture = null
 	
-	$DialogUI/NinePatchRect/Name.text = dialogues[current_dialogue_id]["name"]	
-	$DialogUI/NinePatchRect/Dialogue.text = dialogues[current_dialogue_id]["text"]
+	$DialogUI/DialogBox/Name.text = dialogues[current_dialogue_id]["name"]	
+	$DialogUI/DialogBox/Dialogue.text = dialogues[current_dialogue_id]["text"]
 	
 func load_dialogue():
 	var file = File.new()
