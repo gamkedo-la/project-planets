@@ -26,7 +26,7 @@ func _deferred_goto_scene(path):
 	
 	get_tree().get_root().add_child(current_scene)
 	
-	get_tree().set_current_scene(current_scene)
+	#get_tree().set_current_scene(current_scene)
 	
 	print(current_scene)
 
