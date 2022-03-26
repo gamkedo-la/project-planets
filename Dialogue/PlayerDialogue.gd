@@ -24,10 +24,12 @@ func next_line():
 	
 	if current_dialogue_id >= len(dialogues):
 		print("End of dialogue")
+		queue_free()
+		Global.goto_scene("res://Levels/Level_1.tscn")
 		return
 		
 	var file = File.new()
-	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["name"] + ".png"
+	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["fileName"] + ".png"
 	
 	if file.file_exists(img):
 		$DialogUI/Avatar.texture = load(img)

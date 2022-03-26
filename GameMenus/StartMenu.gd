@@ -5,6 +5,7 @@ func _ready():
 
 func _on_StartBtn_pressed():
 	print("Start Button pressed")
+	#Global.goto_scene("res://Dialogue/PlayerDialogue.tscn")
 	Global.goto_scene("res://Levels/Level_1.tscn")
 
 
