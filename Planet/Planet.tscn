@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Planet/Planet.png" type="Texture" id=1]
+[ext_resource path="res://Planet/PlanetEarth.png" type="Texture" id=1]
 [ext_resource path="res://Planet/Planet.gd" type="Script" id=2]
 [ext_resource path="res://Ore/Ore.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PlanetClouds/PlanetClouds.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Shaker/Shaker.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 151.013
+radius = 49.0408
 
 [node name="Planet" type="Node2D" groups=["planet"]]
 position = Vector2( 537, 248 )
