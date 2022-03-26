@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RedPlanetFog.png-d450eb08e88896f4ca117b69c2509c42.stex"
+path="res://.import/RedPlanetFog.png-17b4fe1bfca7374ec30d318da91b2ddb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Particles/RedPlanetFog.png"
-dest_files=[ "res://.import/RedPlanetFog.png-d450eb08e88896f4ca117b69c2509c42.stex" ]
+source_file="res://Planet/RedPlanetFog.png"
+dest_files=[ "res://.import/RedPlanetFog.png-17b4fe1bfca7374ec30d318da91b2ddb.stex" ]
 
 [params]
 
