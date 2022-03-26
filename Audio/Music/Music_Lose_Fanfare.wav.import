@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Music_Lose_Fanfare.wav-dcb8531058a44d54cfa8c7f9ce1169e3.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Music_Lose_Fanfare.wav"
+dest_files=[ "res://.import/Music_Lose_Fanfare.wav-dcb8531058a44d54cfa8c7f9ce1169e3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
