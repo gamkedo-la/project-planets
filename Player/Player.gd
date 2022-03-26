@@ -52,4 +52,4 @@ func game_over_triggered():
 	
 func player_exploded():
 	queue_free()
-	get_tree().change_scene("res://GameMenus/GameOverMenu.tscn")
+	Global.goto_scene("res://GameMenus/GameOverMenu.tscn")

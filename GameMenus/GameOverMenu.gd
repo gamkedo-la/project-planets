@@ -13,7 +13,7 @@ func _ready():
 
 
 func _on_RestartBtn_pressed():
-	get_tree().change_scene(Global.current_scene)
+	Global.goto_scene(Global.current_scene)
 
 func _on_ExitBtn_pressed():
 	print("Exit Button pressed")
