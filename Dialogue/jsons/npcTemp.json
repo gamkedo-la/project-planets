@@ -1,0 +1,7 @@
+[
+  {"fileName": "Player", "name": "Player", "text": "Hello, is anybody there?"},
+  {"fileName": "Level1", "name": "Planet Earth", "text": "No. Now go away."},
+  {"fileName": "Player", "name": "Player", "text": "I can hear you."},
+  {"fileName": "Level1", "name": "Planet Earth", "text": "Then why are you still here?"},
+  {"fileName": "Level2", "name": "Planet Earth", "text": "like the night"}
+]

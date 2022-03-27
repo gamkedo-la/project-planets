@@ -1,22 +1,64 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Dialogue/speechBubble.png" type="Texture" id=1]
 [ext_resource path="res://Dialogue/PlayerDialogue.gd" type="Script" id=2]
 [ext_resource path="res://GameMenus/Fonts/KenneyRocketSquareDialogue.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Dialogue/Player.png" type="Texture" id=4]
+[ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Bounce"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 843, 77 ), Vector2( 843, 70 ), Vector2( 843, 77 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 843, 77 ) ]
+}
 
 [node name="PlayerDialogue" type="CanvasLayer"]
 script = ExtResource( 2 )
 dialogue_file = "res://Dialogue/jsons/npc.json"
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0705882, 0.0627451, 0.0627451, 0.443137 )
+texture = ExtResource( 5 )
 
 [node name="DialogUI" type="Control" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
+
+[node name="Avatar" type="TextureRect" parent="DialogUI"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 92.0
+margin_top = -385.0
+margin_right = 162.0
+margin_bottom = -315.0
+texture = ExtResource( 4 )
+expand = true
 
 [node name="DialogBox" type="NinePatchRect" parent="DialogUI"]
 anchor_left = 0.5
@@ -55,14 +97,16 @@ custom_colors/default_color = Color( 0.0117647, 0.0156863, 0.309804, 1 )
 custom_fonts/normal_font = ExtResource( 3 )
 text = "Dialogue"
 
-[node name="Avatar" type="TextureRect" parent="DialogUI"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 92.0
-margin_top = -385.0
-margin_right = 162.0
-margin_bottom = -315.0
-texture = ExtResource( 4 )
-expand = true
+[node name="Indicator" type="Polygon2D" parent="DialogUI/DialogBox"]
+visible = false
+position = Vector2( 843, 77 )
+rotation = -3.14159
+color = Color( 0.670588, 0.321569, 0.211765, 1 )
+polygon = PoolVector2Array( 0, 0, 13, -19, 25, 0 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogBox/Indicator"]
+anims/Bounce = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="DialogUI"]
+one_shot = true
