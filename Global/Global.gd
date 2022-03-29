@@ -3,6 +3,9 @@ extends Node
 var orbs_collected
 var current_scene = null
 
+# keep track of the current level_path for reloading purposes
+var current_level_path = null
+
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count()-1)
@@ -14,7 +17,14 @@ func _ready():
 func increase_orb_count():
 	orbs_collected += 1
 	
-func goto_scene(path):
+func reset_orb_count():
+	orbs_collected = 0
+	
+func goto_scene(path, save_path=false):
+	# save_path: should be set to true when loading a gameplay level (scenes we 
+	# want to reload) and false for scenes like menus etc... (default is false)
+	if save_path:
+		current_level_path = path
 	call_deferred("_deferred_goto_scene", path)
 	
 func _deferred_goto_scene(path):

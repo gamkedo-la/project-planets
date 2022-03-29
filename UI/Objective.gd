@@ -19,5 +19,5 @@ func _process(delta):
 		
 	if score >= score_objective:
 		Global.orbs_collected = 0
-		Global.goto_scene(next_level)
+		Global.goto_scene(next_level, true)
 #	pass

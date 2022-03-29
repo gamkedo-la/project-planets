@@ -13,7 +13,8 @@ func _ready():
 
 
 func _on_RestartBtn_pressed():
-	Global.goto_scene(Global.current_scene)
+	Global.reset_orb_count()
+	Global.goto_scene(Global.current_level_path)
 
 func _on_ExitBtn_pressed():
 	print("Exit Button pressed")
