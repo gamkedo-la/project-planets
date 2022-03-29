@@ -14,22 +14,16 @@ func _ready():
 	play()
 	
 func play():
+	if finished:
+		return
+		
 	dialogues = load_dialogue()
+	print("player controls function call")
 	
-	#current_dialogue_id = -1
 	next_line()
 	
 func _input(event):
-	#var endOfConversation = "res://Dialogue/" + dialogues[current_dialogue_id]["fileName"]
-	
 	if event.is_action_pressed("ui_accept"):
-		"""
-		print("res://Dialogue/" + dialogues[current_dialogue_id]["fileName"])
-		if endOfConversation == "res://Dialogue/Level2":
-			queue_free()
-			Global.goto_scene("res://Levels/Level_1.tscn")
-		"""
-			
 		if finished:
 			next_line()
 		else:
@@ -37,20 +31,17 @@ func _input(event):
 			dialogue_indicator()
 		
 func next_line():
-	print(current_dialogue_id)
-	print(Global.current_scene)
 	$DialogUI/DialogBox/Indicator.visible = false
 	
 	if current_dialogue_id >= len(dialogues):
-		print("End of dialogue")
 		queue_free()
-		Global.goto_scene("res://Levels/Level_1.tscn")
+		$DialogUI.visible = false
 		return
 		
 	finished = false
 		
 	var file = File.new()
-	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["fileName"] + ".png"
+	var img = "res://Dialogue/" + dialogues[current_dialogue_id]["picName"] + ".png"
 	
 	if file.file_exists(img):
 		$DialogUI/Avatar.texture = load(img)
@@ -66,6 +57,7 @@ func next_line():
 		
 		$DialogUI/Timer.start()
 		yield($DialogUI/Timer, "timeout")
+		
 	finished = true
 	dialogue_indicator()
 	current_dialogue_id += 1

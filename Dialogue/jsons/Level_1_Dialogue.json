@@ -1,0 +1,6 @@
+[
+  {"picName": "Player", "name": "Player", "text": "Hello, is anybody there?"},
+  {"picName": "Earth", "name": "Planet Earth", "text": "No. Now go away."},
+  {"picName": "Player", "name": "Player", "text": "I can hear you."},
+  {"picName": "Earth", "name": "Planet Earth", "text": "Then why are you still here?"}
+]

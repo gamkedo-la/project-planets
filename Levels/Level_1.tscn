@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Dialogue/PlayerDialogue.tscn" type="PackedScene" id=2]
 
 [node name="Level_1" instance=ExtResource( 1 )]
 
@@ -10,3 +11,6 @@ difficulty = "none"
 [node name="Objective" parent="." index="5"]
 score_objective = 50
 next_level = "res://Levels/Level_2.tscn"
+
+[node name="PlayerDialogue" parent="." index="10" instance=ExtResource( 2 )]
+dialogue_file = "res://Dialogue/jsons/Level_1_Dialogue.json"
