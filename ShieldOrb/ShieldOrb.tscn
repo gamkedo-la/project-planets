@@ -8,6 +8,7 @@
 radius = 17.1172
 
 [node name="ShieldOrb" type="Node2D" groups=["shield"]]
+scale = Vector2( 4, 4 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lazer_particle.png-5b32a164eb0db7856e83091c60207653.stex"
+path="res://.import/orange_energy_beam.png-dd6be39e29ff0d949b603940779f08a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ShieldOrb/lazer_particle.png"
-dest_files=[ "res://.import/lazer_particle.png-5b32a164eb0db7856e83091c60207653.stex" ]
+source_file="res://ShieldOrb/orange_energy_beam.png"
+dest_files=[ "res://.import/orange_energy_beam.png-dd6be39e29ff0d949b603940779f08a8.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
