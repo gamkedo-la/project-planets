@@ -19,5 +19,6 @@ cast = true
 
 [node name="Objective" parent="." index="5"]
 score_objective = 200
+next_level = "res://GameMenus/GameEndScreen.tscn"
 
 [editable path="ShieldRing"]
