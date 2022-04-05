@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Planet/RedPlanet.png" type="Texture" id=2]
 
 [node name="Level_2" instance=ExtResource( 1 )]
 
@@ -10,8 +11,12 @@ difficulty = "easy"
 [node name="ShieldOrb2" parent="ShieldRing/Easy" index="2"]
 cast = true
 
+[node name="Sprite" parent="Planet" index="0"]
+texture = ExtResource( 2 )
+
 [node name="Objective" parent="." index="5"]
 score_objective = 100
 next_level = "res://Levels/Level_3.tscn"
 
 [editable path="ShieldRing"]
+[editable path="Planet"]
