@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Audio/Music/Music_Main_Menu.wav" type="AudioStream" id=2]
 [ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=3]
 [ext_resource path="res://GameMenus/StartMenu.gd" type="Script" id=4]
 [ext_resource path="res://GameMenus/MenuBtn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Transition.tscn" type="PackedScene" id=6]
 
 [node name="StartMenu" type="Node"]
 script = ExtResource( 4 )
@@ -93,6 +94,10 @@ arrow_margin_from_center = 129
 stream = ExtResource( 2 )
 autoplay = true
 
+[node name="Transition" parent="." instance=ExtResource( 6 )]
+layer = 0
+
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="transitioned" from="Transition" to="." method="_on_Transition_transitioned"]
