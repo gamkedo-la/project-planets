@@ -14,6 +14,7 @@ func _ready():
 	Events.connect("player_hit", self, "spawn_damage_particle")
 	Events.connect("game_over_triggered", self, "game_over_triggered")
 	Events.connect("player_exploded", self, "player_exploded")
+	Events.connect("healthpack_collected", self, "collect_healthpack")
 
 
 func _physics_process(delta):
@@ -46,6 +47,13 @@ func spawn_damage_particle():
 	var p = damage_particle.instance()
 	$PlayerSprite.add_child(p)
 	$Damage_SFX.play()
+
+func collect_healthpack():
+	# TODO: implement!
+	# this reuses the reward particle and sound - FIXME
+	var p = reward_particle.instance()
+	$PlayerSprite.add_child(p)
+	$Reward_SFX.play()
 
 func game_over_triggered():
 	$PlayerSprite.visible = false
