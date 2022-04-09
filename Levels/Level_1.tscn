@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Dialogue/PlayerDialogue.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/Music/Stage_Music_WIP.wav" type="AudioStream" id=3]
 
 [node name="Level_1" instance=ExtResource( 1 )]
 
@@ -14,3 +15,7 @@ next_level = "res://Levels/Level_2.tscn"
 
 [node name="PlayerDialogue" parent="." index="10" instance=ExtResource( 2 )]
 dialogue_file = "res://Dialogue/jsons/Level_1_Dialogue.json"
+
+[node name="Stage BGM" type="AudioStreamPlayer" parent="." index="11"]
+stream = ExtResource( 3 )
+autoplay = true
