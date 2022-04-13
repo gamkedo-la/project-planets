@@ -13,7 +13,7 @@ radius = 880.582
 script = ExtResource( 2 )
 
 [node name="Trail" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.894118, 0, 0, 1 )
+modulate = Color( 0.06, 1.45, 1.66, 1 )
 position = Vector2( -8, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
