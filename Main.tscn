@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Planet/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ShieldRing/ShieldRing.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://HealthBar/HealthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://GameMenus/PauseMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Levels/SceneReloader.gd" type="Script" id=9]
+[ext_resource path="res://UI/Transition.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 521, 32 )
@@ -39,6 +40,8 @@ position = Vector2( 512, 384 )
 position = Vector2( 512, 384 )
 
 [node name="Objective" parent="." instance=ExtResource( 3 )]
+
+[node name="Transition" parent="Objective" instance=ExtResource( 10 )]
 
 [node name="ScreenBoundaries" type="Node2D" parent="."]
 
@@ -78,3 +81,5 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="transitioned" from="Objective/Transition" to="Objective" method="_on_Transition_transitioned"]

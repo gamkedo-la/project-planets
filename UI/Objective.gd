@@ -19,5 +19,9 @@ func _process(delta):
 		
 	if score >= score_objective:
 		Global.orbs_collected = 0
-		Global.goto_scene(next_level, true)
-#	pass
+		$Transition.transition()
+		#Global.goto_scene(next_level, true)
+
+
+func _on_Transition_transitioned():
+	Global.goto_scene(next_level, true)
