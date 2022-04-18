@@ -31,12 +31,12 @@ func hide_arrow():
 
 func _on_MenuBtn_focus_entered():
 	show_arrow() # show menu pointer
-	get_node("RichTextLabel").add_color_override("default_color", Color(255,163,0,255))
+	get_node("RichTextLabel").add_color_override("default_color", Color(1.0,0.6,0.0,1.0))
 	# change color of text to ffa300
 
 func _on_MenuBtn_focus_exited():
 	hide_arrow() # hide menu pointer
-	get_node("RichTextLabel").add_color_override("default_color", Color(255,241,232,255))
+	get_node("RichTextLabel").add_color_override("default_color", Color(1.0,0.94,0.9,1.0))
 	# change color of text to fff1e8
 	
 func _on_MenuBtn_mouse_entered():
