@@ -22,4 +22,4 @@ func _on_ExitBtn_pressed():
 
 func _on_MenuBtn_pressed():
 	print("Loading main menu")
-	get_tree().change_scene("res://GameMenus/StartMenu.tscn")
+	Global.goto_scene("res://GameMenus/StartMenu.tscn")
