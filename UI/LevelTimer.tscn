@@ -10,9 +10,6 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 10.0
@@ -39,3 +36,5 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

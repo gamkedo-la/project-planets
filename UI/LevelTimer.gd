@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.start(60)
+	$Timer.start(15)
 	pass # Replace with function body.
 
 
@@ -16,3 +16,8 @@ func _ready():
 func _process(delta):
 	$TimerLabel.text = str(int($Timer.time_left))
 #	pass
+
+
+func _on_Timer_timeout():
+	Global.goto_scene("res://GameMenus/GameOverMenu.tscn")
+	pass # Replace with function body.
