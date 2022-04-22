@@ -40,6 +40,7 @@ tracks/0/keys = {
 script = ExtResource( 2 )
 
 [node name="DialogUI" type="Control" parent="."]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 

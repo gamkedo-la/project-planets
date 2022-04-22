@@ -20,5 +20,6 @@ func _on_ExitBtn_pressed():
 
 
 func _on_Transition_transitioned():
-	Global.goto_scene("res://Cutscenes/Cutscene.tscn", true)
+	Global.goto_scene("res://Levels/Level_1.tscn")
+	#Global.goto_scene("res://Cutscenes/Cutscene.tscn", true)
 	print("load level")

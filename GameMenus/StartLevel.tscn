@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=2]
+[ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare22.tres" type="DynamicFont" id=3]
+[ext_resource path="res://GameMenus/StartLevel.gd" type="Script" id=4]
+
+[node name="StartLevel" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="TopHalf" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 384.0
+alignment = 1
+
+[node name="LevelNameLabel" type="Label" parent="TopHalf"]
+margin_top = 155.0
+margin_right = 1024.0
+margin_bottom = 228.0
+custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.639216, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Level"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="BottomHalf" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -387.0
+margin_bottom = -3.0
+
+[node name="StartBtnLabel" type="Label" parent="BottomHalf"]
+margin_right = 1024.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 1, 0.945098, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.639216, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Press Any Button To Start"
+align = 1
+valign = 1
+uppercase = true

@@ -3,6 +3,9 @@ extends Node
 var orbs_collected
 var current_scene = null
 
+var level_number = 1
+var restart_level_number = 1
+
 # keep track of the current level_path for reloading purposes
 var current_level_path = null
 
