@@ -13,5 +13,6 @@ func _input(event):
 			get_tree().paused = start_level_pause
 			visible = start_level_pause
 			only_once = false	
+			$AudioStreamPlayer.playing = false
 
 
