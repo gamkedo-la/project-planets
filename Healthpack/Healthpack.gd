@@ -5,7 +5,7 @@
 
 extends KinematicBody2D
 
-var speed = 100
+var speed = 200
 var velocity = Vector2.ZERO
 var player = null
 
