@@ -5,7 +5,7 @@
 
 [node name="Level_3" instance=ExtResource( 1 )]
 
-[node name="ShieldRing" parent="." index="2"]
+[node name="ShieldRing" parent="." index="3"]
 difficulty = "easy"
 difficulty_speed = 3.0
 
@@ -21,7 +21,7 @@ cast = true
 [node name="Sprite" parent="Planet" index="0"]
 texture = ExtResource( 2 )
 
-[node name="Objective" parent="." index="5"]
+[node name="Objective" parent="." index="6"]
 score_objective = 200
 next_level = "res://Levels/Level_4.tscn"
 

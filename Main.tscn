@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Planet/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ShieldRing/ShieldRing.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Levels/SceneReloader.gd" type="Script" id=9]
 [ext_resource path="res://UI/Transition.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GameMenus/StartLevel.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Audio/Music/Stage_Music_WIP.wav" type="AudioStream" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 521, 32 )
@@ -86,5 +87,9 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Stage BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [connection signal="transitioned" from="Objective/Transition" to="Objective" method="_on_Transition_transitioned"]
