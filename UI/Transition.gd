@@ -15,6 +15,7 @@ func transition():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "FadeIn":
+		Global.reset_orb_count()
 		anim.play("FadeOut")
 		emit_signal("transitioned")
 	if anim_name == "FadeOut":
