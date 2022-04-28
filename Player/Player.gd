@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export (PackedScene) var bullet
 var reward_particle = load("res://Particles/RewardParticles.tscn")
+var health_particle = load("res://Particles/HealthParticle.tscn")
 var damage_particle = load("res://Particles/PlayerDamageParticles.tscn")
 
 var move_speed = 100 # pixels/sec
@@ -51,7 +52,7 @@ func spawn_damage_particle():
 func collect_healthpack():
 	# TODO: implement!
 	# this reuses the reward particle and sound - FIXME
-	var p = reward_particle.instance()
+	var p = health_particle.instance()
 	$PlayerSprite.add_child(p)
 	$Reward_SFX.play()
 
