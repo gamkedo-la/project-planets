@@ -18,5 +18,8 @@ texture = ExtResource( 2 )
 score_objective = 100
 next_level = "res://Levels/Level_3.tscn"
 
+[node name="LevelTimer" parent="." index="8"]
+time_limit = 45
+
 [editable path="ShieldRing"]
 [editable path="Planet"]

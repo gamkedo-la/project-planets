@@ -19,6 +19,9 @@ difficulty = "none"
 score_objective = 50
 next_level = "res://Levels/Level_2.tscn"
 
+[node name="LevelTimer" parent="." index="8"]
+time_limit = 60
+
 [node name="PlayerDialogue" parent="." index="10" instance=ExtResource( 2 )]
 dialogue_file = "res://Dialogue/jsons/Level_1_Dialogue.json"
 
@@ -41,7 +44,6 @@ texture = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer" index="1"]
 margin_left = 43.0
-margin_top = 10.0
 margin_right = 543.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 500, 0 )
@@ -63,7 +65,6 @@ texture = ExtResource( 4 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2" index="1"]
 margin_left = 43.0
-margin_top = 10.0
 margin_right = 543.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 500, 0 )
