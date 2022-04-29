@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerPortrait.png-feea3d64c85836694e1d741e246845ad.stex"
+path="res://.import/icon_dark_2.svg-4553d6b9840e7d582193674faaf3f5aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/PlayerPortrait.png"
-dest_files=[ "res://.import/PlayerPortrait.png-feea3d64c85836694e1d741e246845ad.stex" ]
+source_file="res://addons/dialogue_manager/assets/icons/icon_dark_2.svg"
+dest_files=[ "res://.import/icon_dark_2.svg-4553d6b9840e7d582193674faaf3f5aa.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
-svg/scale=1.0
+detect_3d=false
+svg/scale=2.0

@@ -1,0 +1,162 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ start
+
+You: Home...
+You: Or, at least it used to be home...
+You: Back when I was the planet's designated protector.
+- I have good memories of this place
+	You: I have good memories of this place.
+- It's good to be back
+	You: It's good to be back.
+- I wish I never came back
+	You: I wish I never came back
+You: time to get to work... 
+=> END
+"
+errors = [  ]
+titles = {
+"start": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "11",
+"parent_id": "9",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I wish I never came back",
+"time": null,
+"translation_key": "I wish I never came back",
+"type": "dialogue"
+},
+"11": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "12",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "time to get to work...",
+"time": null,
+"translation_key": "time to get to work...",
+"type": "dialogue"
+},
+"12": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Home...",
+"time": null,
+"translation_key": "Home...",
+"type": "dialogue"
+},
+"3": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Or, at least it used to be home...",
+"time": null,
+"translation_key": "Or, at least it used to be home...",
+"type": "dialogue"
+},
+"4": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "5",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Back when I was the planet's designated protector.",
+"time": null,
+"translation_key": "Back when I was the planet's designated protector.",
+"type": "dialogue"
+},
+"5": {
+"next_id": "6",
+"next_id_after": "11",
+"replacements": [  ],
+"responses": PoolStringArray( "5", "7", "9" ),
+"text": "I have good memories of this place",
+"translation_key": "I have good memories of this place",
+"type": "response"
+},
+"6": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "11",
+"parent_id": "5",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I have good memories of this place.",
+"time": null,
+"translation_key": "I have good memories of this place.",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "11",
+"replacements": [  ],
+"text": "It's good to be back",
+"translation_key": "It's good to be back",
+"type": "response"
+},
+"8": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "11",
+"parent_id": "7",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "It's good to be back.",
+"time": null,
+"translation_key": "It's good to be back.",
+"type": "dialogue"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "11",
+"replacements": [  ],
+"text": "I wish I never came back",
+"translation_key": "I wish I never came back",
+"type": "response"
+}
+}

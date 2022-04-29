@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Dialogue/PlayerDialogue.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/left_arrow.png" type="Texture" id=3]
 [ext_resource path="res://UI/right_arrow.png" type="Texture" id=4]
 [ext_resource path="res://UI/down_arrow.png" type="Texture" id=5]
@@ -22,10 +21,7 @@ next_level = "res://Levels/Level_2.tscn"
 [node name="LevelTimer" parent="." index="8"]
 time_limit = 60
 
-[node name="PlayerDialogue" parent="." index="10" instance=ExtResource( 2 )]
-dialogue_file = "res://Dialogue/jsons/Level_1_Dialogue.json"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="12"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="11"]
 margin_left = 25.0
 margin_top = 600.0
 margin_right = 525.0
@@ -98,7 +94,7 @@ text = "Shoot
 "
 fit_content_height = true
 
-[node name="InputTutorial" type="Control" parent="." index="13"]
+[node name="InputTutorial" type="Control" parent="." index="12"]
 margin_left = 25.0
 margin_top = 600.0
 margin_right = 65.0

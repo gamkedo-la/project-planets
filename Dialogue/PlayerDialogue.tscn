@@ -40,7 +40,6 @@ tracks/0/keys = {
 script = ExtResource( 2 )
 
 [node name="DialogUI" type="Control" parent="."]
-visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 
@@ -91,14 +90,13 @@ custom_colors/default_color = Color( 0.0117647, 0.0156863, 0.309804, 1 )
 custom_fonts/normal_font = ExtResource( 3 )
 text = "Dialogue"
 
-[node name="Indicator" type="Polygon2D" parent="DialogUI/DialogBox"]
-visible = false
+[node name="Indicator" type="Polygon2D" parent="DialogUI"]
 position = Vector2( 843, 77 )
 rotation = -3.14159
 color = Color( 0.670588, 0.321569, 0.211765, 1 )
 polygon = PoolVector2Array( 0, 0, 13, -19, 25, 0 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogBox/Indicator"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/Indicator"]
 anims/Bounce = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 

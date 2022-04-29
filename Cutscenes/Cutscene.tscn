@@ -103,11 +103,11 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 13 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "_progress_to_next_scene"
+"method": "trigger_dialogue"
 } ]
 }
 tracks/4/type = "value"
@@ -115,7 +115,7 @@ tracks/4/path = NodePath("RichTextLabel:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/keys = {
 "times": PoolRealArray( 0, 7, 9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -132,19 +132,19 @@ script = ExtResource( 2 )
 
 [node name="IntroFirstFrame" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 224, 352 )
+position = Vector2( 128, 160 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 
 [node name="IntroSecondFrame" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 511, 191 )
+position = Vector2( 432, 192 )
 scale = Vector2( 2.01562, 2.01562 )
 texture = ExtResource( 4 )
 
 [node name="IntroThirdFrame" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 671, 543 )
+position = Vector2( 800, 224 )
 scale = Vector2( 2.51563, 2.51563 )
 texture = ExtResource( 5 )
 
