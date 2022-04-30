@@ -14,14 +14,11 @@ cast = true
 [node name="ShieldOrb2" parent="ShieldRing/Easy" index="2"]
 cast = true
 
-[node name="ShieldOrb3" parent="ShieldRing/Easy" index="3"]
-cast = true
-
-[node name="ShieldOrb4" parent="ShieldRing/Easy" index="4"]
-cast = true
-
 [node name="Objective" parent="." index="6"]
-score_objective = 150
+score_objective = 50
 next_level = "res://Levels/Level_6.tscn"
+
+[node name="LevelTimer" parent="." index="8"]
+time_limit = 45
 
 [editable path="ShieldRing"]
