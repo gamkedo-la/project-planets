@@ -54,7 +54,7 @@ func collect_healthpack():
 	# this reuses the reward particle and sound - FIXME
 	var p = health_particle.instance()
 	$PlayerSprite.add_child(p)
-	$Reward_SFX.play()
+	$PowerUp_SFX.play()
 
 func game_over_triggered():
 	$PlayerSprite.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/PlayerShip.png" type="Texture" id=1]
 [ext_resource path="res://ShieldRing/ShieldRing.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Audio/SFX/SFX_Collect_Reward.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/SFX/SFX_Big_Explosion.wav" type="AudioStream" id=8]
 [ext_resource path="res://Player/ShipExplosion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Audio/SFX/SFX_Power_Up.wav" type="AudioStream" id=10]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -109,6 +110,9 @@ stream = ExtResource( 7 )
 
 [node name="Damage_SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
+
+[node name="PowerUp_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 
 [node name="ShipExplosion" parent="." instance=ExtResource( 9 )]
 visible = false
