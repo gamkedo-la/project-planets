@@ -18,4 +18,5 @@ func _process(delta):
 
 func _on_Timer_timeout():
 	Global.goto_scene("res://GameMenus/GameOverMenu.tscn")
+	Global.loss_reason = "You Ran Out of Time!"
 	pass # Replace with function body.
