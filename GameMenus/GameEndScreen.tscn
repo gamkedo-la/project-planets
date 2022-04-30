@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Planet/StarryBackground.png" type="Texture" id=1]
 [ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Audio/Music/Music_Win_Fanfare.wav" type="AudioStream" id=3]
 
 [node name="GameEndScreen" type="Node2D"]
 
@@ -40,3 +41,7 @@ margin_right = 1024.0
 margin_bottom = 772.0
 rect_min_size = Vector2( 0, 384 )
 custom_constants/separation = 25
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
