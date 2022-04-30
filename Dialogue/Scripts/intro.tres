@@ -16,11 +16,17 @@ You: Back when I was the planet's designated protector.
 	You: It's good to be back.
 - I wish I never came back
 	You: I wish I never came back
-You: time to get to work... 
 => END
-"
+
+~ second_cutscene
+
+You: But, now it's time to get work!
+You: I need these resources, now more than ever.
+You: Forgive me...
+=> END"
 errors = [  ]
 titles = {
+"second_cutscene": "15",
 "start": "2"
 }
 lines = {
@@ -45,20 +51,57 @@ lines = {
 "type": "dialogue"
 },
 "11": {
+"next_id": "end",
+"type": "goto"
+},
+"13": {
+"next_id": "15",
+"text": "second_cutscene",
+"type": "title"
+},
+"15": {
 "character": "You",
 "character_replacements": [  ],
 "inline_mutations": [  ],
-"next_id": "12",
+"next_id": "16",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "time to get to work...",
+"text": "But, now it's time to get work!",
 "time": null,
-"translation_key": "time to get to work...",
+"translation_key": "But, now it's time to get work!",
 "type": "dialogue"
 },
-"12": {
+"16": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "17",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "I need these resources, now more than ever.",
+"time": null,
+"translation_key": "I need these resources, now more than ever.",
+"type": "dialogue"
+},
+"17": {
+"character": "You",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "18",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Forgive me...",
+"time": null,
+"translation_key": "Forgive me...",
+"type": "dialogue"
+},
+"18": {
 "next_id": "end",
 "type": "goto"
 },
