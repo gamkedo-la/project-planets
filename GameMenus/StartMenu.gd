@@ -11,7 +11,7 @@ func _on_StartBtn_pressed():
 	#Global.goto_scene("res://Levels/Level_1.tscn", true)
 
 func _on_OptionsBtn_pressed():
-	print("Opitions Button pressed")
+	Global.goto_scene("res://GameMenus/Credits.tscn", false)
 
 func _on_ExitBtn_pressed():
 	print("Exit Button pressed")
