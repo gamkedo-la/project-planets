@@ -8,9 +8,6 @@ func _ready():
 func _physics_process(delta):
 	position += transform.y * speed * delta
 
-	
-
-
 func _on_Bullet_area_entered(area):
 	if area.get_parent().is_in_group("planet"):
 		speed = 0
@@ -18,6 +15,8 @@ func _on_Bullet_area_entered(area):
 		$AnimationPlayer.play("hit_fx")
 
 	elif area.get_parent().is_in_group("shield"):
+		speed = 0
+		$AnimationPlayer.play("destroyed")
 		pass
 
 func destroy_self():
