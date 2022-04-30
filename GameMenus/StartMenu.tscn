@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameMenus/Fonts/KenneyRocketSquare54.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Audio/Music/Music_Main_Menu.wav" type="AudioStream" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://GameMenus/StartMenu.gd" type="Script" id=4]
 [ext_resource path="res://GameMenus/MenuBtn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI/Transition.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameMenus/Fonts/Kenney Rocket.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Planet/PlanetEarth.png" type="Texture" id=8]
+[ext_resource path="res://Planet/RedPlanet.png" type="Texture" id=9]
+[ext_resource path="res://Planet/Frozen Planet.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
 
 [node name="StartMenu" type="Node"]
 script = ExtResource( 4 )
@@ -96,6 +103,41 @@ autoplay = true
 
 [node name="Transition" parent="." instance=ExtResource( 6 )]
 layer = 0
+
+[node name="EnterToSelect" type="RichTextLabel" parent="."]
+margin_left = 26.0
+margin_top = 700.0
+margin_right = 526.0
+margin_bottom = 763.0
+rect_min_size = Vector2( 500, 0 )
+rect_clip_content = false
+custom_colors/default_color = Color( 1, 0.92549, 0.152941, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Press Enter To Select
+Arrow Keys To Navigate Menu
+"
+fit_content_height = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 224.0
+margin_top = 288.0
+margin_right = 320.0
+margin_bottom = 384.0
+texture = ExtResource( 8 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 464.0
+margin_top = 256.0
+margin_right = 560.0
+margin_bottom = 352.0
+texture = ExtResource( 9 )
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 704.0
+margin_top = 288.0
+margin_right = 800.0
+margin_bottom = 384.0
+texture = ExtResource( 10 )
 
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
 [connection signal="pressed" from="Title/BottomHalf_MainMenu/Credits" to="." method="_on_OptionsBtn_pressed"]

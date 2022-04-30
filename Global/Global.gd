@@ -3,6 +3,7 @@ extends Node
 var orbs_collected
 var current_scene = null
 var next_cutscene = ""
+var loss_reason = ""
 
 var level_number = 1
 var restart_level_number = 1

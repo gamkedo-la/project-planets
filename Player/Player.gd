@@ -62,3 +62,4 @@ func game_over_triggered():
 func player_exploded():
 	queue_free()
 	Global.goto_scene("res://GameMenus/GameOverMenu.tscn")
+	Global.loss_reason = "You Were Destroyed!"
