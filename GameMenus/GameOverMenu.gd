@@ -6,6 +6,7 @@ extends Node
 # var b = "text"
 func _ready():
 	$Title/BottomHalf_MainMenu/StartBtn.grab_focus()
+	$LossReason.text = Global.loss_reason
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
