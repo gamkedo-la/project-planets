@@ -18,7 +18,10 @@ cast = true
 cast = true
 
 [node name="Objective" parent="." index="6"]
-score_objective = 150
-next_level = "res://GameMenus/GameEndScreen.tscn"
+score_objective = 75
+next_level = "res://Levels/Level_5.tscn"
+
+[node name="LevelTimer" parent="." index="8"]
+time_limit = 30
 
 [editable path="ShieldRing"]
